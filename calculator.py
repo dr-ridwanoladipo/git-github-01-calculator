@@ -19,5 +19,8 @@ try:
 
     print(f"{expression} = {result}")
 
+except ZeroDivisionError:
+    print("\nError: Cannot divide by zero.")
+
 except Exception:
     print("\nError!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
