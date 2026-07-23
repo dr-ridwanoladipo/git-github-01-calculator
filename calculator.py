@@ -1,60 +1,23 @@
-print("Simple Calculator - Version 3")
+print("=" * 50)
+print("      ADVANCED CALCULATOR - VERSION 4")
+print("=" * 50)
 
-print("\nChoose an operation:")
-print("1. Addition (+)")
-print("2. Subtraction (-)")
-print("3. Multiplication (*)")
-print("4. Division (/)")
+print("\nExamples:")
+print("34 + 45")
+print("34 + 45 * 87 - 89")
+print("(10 + 5) * 2")
+print("100 / 4 + 20")
 
-choice = input("\nEnter your choice (1/2/3/4): ")
+expression = input("\nEnter your calculation: ")
 
-num_count = int(input("How many numbers do you want to calculate? "))
+try:
+    result = eval(expression)
 
-numbers = []
+    print("\n" + "=" * 50)
+    print("CALCULATION")
+    print("=" * 50)
 
-for i in range(num_count):
-    number = float(input(f"Enter number {i + 1}: "))
-    numbers.append(number)
+    print(f"{expression} = {result}")
 
-if choice == "1":
-    result = sum(numbers)
-    expression = " + ".join(str(num) for num in numbers)
-
-elif choice == "2":
-    result = numbers[0]
-    expression = str(numbers[0])
-
-    for num in numbers[1:]:
-        result -= num
-        expression += f" - {num}"
-
-elif choice == "3":
-    result = 1
-    expression = ""
-
-    for i, num in enumerate(numbers):
-        result *= num
-
-        if i == 0:
-            expression = str(num)
-        else:
-            expression += f" * {num}"
-
-elif choice == "4":
-    result = numbers[0]
-    expression = str(numbers[0])
-
-    for num in numbers[1:]:
-        if num == 0:
-            print("Error: Cannot divide by zero")
-            exit()
-
-        result /= num
-        expression += f" / {num}"
-
-else:
-    print("Invalid choice")
-    exit()
-
-print("\nCalculation:")
-print(f"{expression} = {result}")
+except Exception:
+    print("\nError!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
