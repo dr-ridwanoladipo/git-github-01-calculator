@@ -1,0 +1,104 @@
+Commit Messages
+______________________________
+
+refactor: extract calculation logic into utility module
+refactor: replace eval with safe AST-based expression parser
+feat: add expression-based calculator with eval
+feat: support multiple operations and variable-length inputs
+feat: add user input and division-by-zero handling
+feat: add basic calculator operations
+
+
+Conventional Git Commit Types
+________________________________
+
+feat: add new feature
+fix: resolve division bug
+docs: update README
+refactor: simplify calculation logic
+test: add calculator tests
+chore: update project configuration
+
+
+README.md
+_________________
+
+# Git & GitHub Evolution Project
+
+A simple calculator project built to demonstrate how a software project evolves with Git and GitHub.
+
+## What You'll Learn
+
+- Creating a Git repository
+- Making meaningful commits
+- Tracking project history
+- Branching and merging
+- Resolving conflicts
+- Using GitHub professionally
+
+Each commit represents a new stage in the project's evolution, making it easy to understand Git workflows from beginner to advanced.
+
+
+Commands Used in This Section
+________________________________
+
+git status
+git init
+git add . | git add calculator.py
+git log | git log --oneline
+git commit -m ""
+git checkout 021d750
+git checkout main
+__
+git remote add origin https://github.com/dr-ridwanoladipo/git-github-01-calculator.git
+git push -u origin main
+git push
+__
+q
+cls
+ls -Force
+rm -r -Force .git
+
+
+
+PUSH
+______
+
+👉 GitHub Repository Name: git-github-01-calculator
+👉 GitHub Description:
+Git & GitHub Learning Repository: A beginner-friendly project that evolves from a simple calculator into a modular, secure application across multiple versions. Built to demonstrate real-world Git workflows, commits, branching, version history, and collaboration, not just the final code.
+👉 Enable Git Credential Manager: git config --global credential.helper manager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
