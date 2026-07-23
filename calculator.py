@@ -1,9 +1,14 @@
-print("Simple Calculator - Version 1")
+print("Simple Calculator - Version 2 - Improved")
 
-a = 30
-b = 5
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
 
+print("\nResults")
 print("Addition:", a + b)
 print("Subtraction:", a - b)
 print("Multiplication:", a * b)
-print("Division:", a / b)
+
+if b != 0:
+    print("Division:", a / b)
+else:
+    print("Division: Cannot divide by zero")
