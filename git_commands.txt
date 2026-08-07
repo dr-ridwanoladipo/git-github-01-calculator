@@ -1,0 +1,46 @@
+Git & GitHub Command Reference
+________________________________
+
+git status
+git init
+---
+git add .
+git add calculator.py calculator_utils.py
+---
+git log
+git log --oneline
+git log --oneline --all
+---
+git commit -m ""
+git checkout 021d750
+git checkout main
+---
+git remote add origin https://github.com/dr-ridwanoladipo/git-github-01-calculator.git
+git push -u origin main
+git push
+git push --force
+git push --force-with-lease
+---
+q
+cls
+ls -Force
+rm -r -Force .git
+---
+git diff
+git diff calculator.py
+git diff --staged
+git diff HEAD~1 HEAD
+git diff a1b2c3d e4f5g6h
+---
+git restore calculator.py
+git restore --staged --worktree calculator.py
+git restore --staged calculator.py
+---
+git reset --soft 3042eef
+git reset --mixed 3042eef
+git reset --hard 3042eef
+---
+git revert --no-edit 879cddf
+git revert --no-commit 3042eef..HEAD
+git commit -m "revert: undo last three commits"
+git revert --abort
