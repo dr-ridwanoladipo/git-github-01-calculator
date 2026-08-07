@@ -28,3 +28,5 @@ except ZeroDivisionError:
 
 except Exception:
     print("\nError: Invalid or unsafe calculation entered.")
+
+print("Thank you for using the calculator!")

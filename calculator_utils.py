@@ -11,6 +11,7 @@ allowed_operators = {
 }
 
 def safe_calculate(node):
+    """Safely evaluate a supported arithmetic expression node."""
     if isinstance(node, ast.Constant):
         return node.value
 
