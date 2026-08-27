@@ -15,6 +15,8 @@ allowed_functions = {
     "sin": lambda x: math.sin(math.radians(x)),
     "cos": lambda x: math.cos(math.radians(x)),
     "tan": lambda x: math.tan(math.radians(x)),
+    "sqrt": math.sqrt,
+    "log": math.log10,
 }
 
 def safe_calculate(node):

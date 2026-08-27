@@ -2,7 +2,7 @@ import ast
 from calculator_utils import safe_calculate
 
 print("=" * 55)
-print("      SAFE ADVANCED CALCULATOR - VERSION 6")
+print("      SAFE ADVANCED CALCULATOR - VERSION 7")
 print("=" * 55)
 
 print("\nExamples:")
@@ -14,6 +14,8 @@ print("2 ** 3")
 print("sin(1)")
 print("cos(1)")
 print("tan(1)")
+print("sqrt(81)")
+print("log(100)")
 
 expression = input("\nEnter your calculation: ")
 
