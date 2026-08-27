@@ -1,4 +1,4 @@
-Git & GitHub Command Reference
+Git & GitHub Reference
 ________________________________
 
 git status
@@ -39,8 +39,21 @@ git restore --staged calculator.py
 git reset --soft 3042eef
 git reset --mixed 3042eef
 git reset --hard 3042eef
+git reset --hard origin/main
 ---
 git revert --no-edit 879cddf
 git revert --no-commit 3042eef..HEAD
 git commit -m "revert: undo last three commits"
 git revert --abort
+---
+cd "C:\Users\USER\Mentorship-Resources\Git-GitHub"
+git clone https://github.com/dr-ridwanoladipo/git-github-01-calculator.git
+git clone https://github.com/dr-ridwanoladipo/git-github-01-calculator.git Calculator
+git remote -v
+---
+python -m venv .venv
+.\.venv\Scripts\Activate
+---
+git fetch
+git pull
+---
