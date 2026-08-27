@@ -1,4 +1,5 @@
 import ast
+import math
 import operator
 
 allowed_operators = {
@@ -8,6 +9,12 @@ allowed_operators = {
     ast.Div: operator.truediv,
     ast.Pow: operator.pow,
     ast.USub: operator.neg,
+}
+
+allowed_functions = {
+    "sin": math.sin,
+    "cos": math.cos,
+    "tan": math.tan,
 }
 
 def safe_calculate(node):
@@ -25,5 +32,17 @@ def safe_calculate(node):
         value = safe_calculate(node.operand)
         operation = allowed_operators[type(node.op)]
         return operation(value)
+
+    elif isinstance(node, ast.Call):
+        if (
+                not isinstance(node.func, ast.Name)
+                or node.func.id not in allowed_functions
+                or len(node.args) != 1
+                or node.keywords
+        ):
+            raise ValueError("Invalid or unsupported function call")
+
+        argument = safe_calculate(node.args[0])
+        return allowed_functions[node.func.id](argument)
 
     raise ValueError("Invalid or unsafe expression")
