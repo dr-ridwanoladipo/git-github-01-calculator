@@ -12,9 +12,9 @@ allowed_operators = {
 }
 
 allowed_functions = {
-    "sin": math.sin,
-    "cos": math.cos,
-    "tan": math.tan,
+    "sin": lambda x: math.sin(math.radians(x)),
+    "cos": lambda x: math.cos(math.radians(x)),
+    "tan": lambda x: math.tan(math.radians(x)),
 }
 
 def safe_calculate(node):
