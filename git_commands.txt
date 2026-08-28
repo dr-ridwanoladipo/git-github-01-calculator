@@ -10,6 +10,7 @@ git add calculator.py calculator_utils.py
 git log
 git log --oneline
 git log --oneline --all
+git log --oneline --graph --all
 ---
 git commit -m ""
 git checkout 021d750
@@ -57,3 +58,16 @@ python -m venv .venv
 git fetch
 git pull
 ---
+ticket: CAL-105: Add trigonometric operations
+branch: feature/CAL-105-trigonometric-operations
+ticket: CAL-106: Improve calculator startup instructions
+branch: refactor/CAL-106-improve-startup-instructions
+---
+git branch
+git switch -c feature/CAL-105-trigonometric-operations
+git symbolic-ref refs/remotes/origin/HEAD
+---
+git switch main
+git merge feature/CAL-105-trigonometric-operations
+git branch -d feature/CAL-105-trigonometric-operations
+git commit -m "merge: resolve conflict between main and CAL-106"
