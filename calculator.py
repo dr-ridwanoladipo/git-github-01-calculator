@@ -18,10 +18,28 @@ print("- Tangent:          tan(45)")
 print("- Square Root:      sqrt(81)")
 print("- Logarithm:        log(100)")
 
+print("\nCommands:")
+print("- history: Show previous calculations")
+print("- exit:    Close the calculator")
+
 history = []
 
 while True:
     expression = input("\nEnter your calculation: ").strip()
+
+    if expression.lower() == "exit":
+        break
+
+    if expression.lower() == "history":
+        if history:
+            print("\nCalculation History:")
+
+            for item in history:
+                print(item)
+        else:
+            print("\nNo calculations yet.")
+
+        continue
 
     if not expression:
         print("\nError: Please enter a calculation.")
